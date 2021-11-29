@@ -2,6 +2,7 @@
 
 * {
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
@@ -12,6 +13,8 @@ body {
   isolation: isolate;
   color: white;
   overflow-x: hidden;
+
+  
 }
 
 nav {
@@ -19,15 +22,14 @@ nav {
   flex-direction: column;
   transition: all 100ms linear;
   background: black;
-  // border: 1px solid red;
   height: 100px;
   position: fixed;
   left: 0;
   right: 0;
   top: 0;
+  z-index: 100;
 
   &.open-menu {
-    // background: rgba(192, 192, 192, 0.082);
     height: max-content;
   }
 
@@ -91,7 +93,6 @@ nav {
     transform: translateX(10px);
     transition: all 100ms linear;
     height: 100%;
-    // background: #0f0f0f;
 
     &.open-menu {
       visibility: unset;
@@ -125,32 +126,95 @@ nav {
 
 .router-outlet-wrapper {
   margin-top: 120px;
-  padding: .5rem;
-  // background: grey;
+
+
+  h1 {
+    text-align: center;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+  }
 
   #router-outlet {
-    .bio {
 
-      img {
-        width: 100%;
+    &.open-menu {
+      opacity: .2;
+    }
+
+    .bio {
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+
+      &::after {
+        content: "";
+        display: block;
+        height: 2px;
+        width: 120%;
+        background: linear-gradient(
+          to right,
+          rgba(255, 0, 0, 0.877),
+          rgba(0, 0, 0, 0.199)
+        );
+        margin-left: -50px;
       }
 
-    }
-    .upcoming-shows{
-
       .img-wrapper {
-        //  width: 100px;
-        //  height: 100px;
-        //  outline: 1px solid red;
         img {
           width: 100%;
-          // outline: 10px solid red;
+          margin-left: -100px;
+        }
+      }
+
+      .bio-description-wrapper {
+        background: rgba(0, 0, 0, 0.603);
+        margin-top: -120px;
+        padding: 15px;
+        font-weight: 300;
+        isolation: isolate;
+        clip-path: polygon(15% 0%, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 15%);
+        border-top: 2px solid rgba(255, 0, 0, 0.363);
+
+        h2 {
+          margin-top: 0;
+          margin-bottom: 10px;
+          padding: 0 10px;
+          text-align: right;
+          width: 100%;
+          text-transform: uppercase;
+        }
+
+        p {
+          padding: 0 15px;
+        }
+      }
+    }
+    .upcoming-shows {
+      .img-wrapper {
+        img {
+          width: 100%;
         }
       }
     }
   }
-}
 
+  .social-media {
+    background: #1c1c1c;
+    font-size: 1.8rem;
+    text-align: center;
+    padding: 10px;
+
+    a {
+      color: white;
+
+      margin-right: 10px;
+      i {
+        
+      }
+    }
+
+  }
+
+}
 
 .projects-outer-wrapper {
   display: flex;

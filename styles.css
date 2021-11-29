@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;900&display=swap");
 * {
   padding: 0;
+  margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -30,6 +31,7 @@ nav {
   left: 0;
   right: 0;
   top: 0;
+  z-index: 100;
 }
 
 nav.open-menu {
@@ -142,15 +144,77 @@ nav ul li a:hover {
 
 .router-outlet-wrapper {
   margin-top: 120px;
-  padding: .5rem;
 }
 
-.router-outlet-wrapper #router-outlet .bio img {
+.router-outlet-wrapper h1 {
+  text-align: center;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+}
+
+.router-outlet-wrapper #router-outlet.open-menu {
+  opacity: .2;
+}
+
+.router-outlet-wrapper #router-outlet .bio {
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.router-outlet-wrapper #router-outlet .bio::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 120%;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 0, 0, 0.877)), to(rgba(0, 0, 0, 0.199)));
+  background: linear-gradient(to right, rgba(255, 0, 0, 0.877), rgba(0, 0, 0, 0.199));
+  margin-left: -50px;
+}
+
+.router-outlet-wrapper #router-outlet .bio .img-wrapper img {
   width: 100%;
+  margin-left: -100px;
+}
+
+.router-outlet-wrapper #router-outlet .bio .bio-description-wrapper {
+  background: rgba(0, 0, 0, 0.603);
+  margin-top: -120px;
+  padding: 15px;
+  font-weight: 300;
+  isolation: isolate;
+  -webkit-clip-path: polygon(15% 0%, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 15%);
+          clip-path: polygon(15% 0%, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 15%);
+  border-top: 2px solid rgba(255, 0, 0, 0.363);
+}
+
+.router-outlet-wrapper #router-outlet .bio .bio-description-wrapper h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding: 0 10px;
+  text-align: right;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.router-outlet-wrapper #router-outlet .bio .bio-description-wrapper p {
+  padding: 0 15px;
 }
 
 .router-outlet-wrapper #router-outlet .upcoming-shows .img-wrapper img {
   width: 100%;
+}
+
+.router-outlet-wrapper .social-media {
+  background: #1c1c1c;
+  font-size: 1.8rem;
+  text-align: center;
+  padding: 10px;
+}
+
+.router-outlet-wrapper .social-media a {
+  color: white;
+  margin-right: 10px;
 }
 
 .projects-outer-wrapper {
