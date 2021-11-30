@@ -40,6 +40,10 @@ nav.open-menu {
   height: max-content;
 }
 
+nav.scroll-effect {
+  height: 80px;
+}
+
 nav .burger-menu {
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -49,6 +53,12 @@ nav .burger-menu {
   top: 35px;
   right: 35px;
   z-index: 100;
+  -webkit-transition: all 100ms linear;
+  transition: all 100ms linear;
+}
+
+nav .burger-menu.scroll-effect {
+  top: 30px;
 }
 
 nav .burger-menu:hover {
@@ -85,12 +95,20 @@ nav .burger-menu .bar-three.effect {
 }
 
 nav .logo {
-  width: clamp(80px, 90px, 150px);
+  width: 80px;
   margin: 0 auto;
+  margin-top: 0.5rem;
+  -webkit-transition: all 100ms linear;
+  transition: all 100ms linear;
 }
 
 nav .logo.open-menu {
   visibility: hidden;
+}
+
+nav .logo.scroll-effect {
+  margin-top: 1rem;
+  width: 50px;
 }
 
 nav ul {
@@ -105,7 +123,10 @@ nav ul {
           transform: translateX(10px);
   -webkit-transition: all 100ms linear;
   transition: all 100ms linear;
-  height: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  background: black;
 }
 
 nav ul.open-menu {
@@ -113,6 +134,7 @@ nav ul.open-menu {
   opacity: 1;
   -webkit-transform: translateX(0);
           transform: translateX(0);
+  background: black;
 }
 
 nav ul li {
@@ -154,11 +176,12 @@ nav ul li a:hover {
 }
 
 .router-outlet-wrapper #router-outlet.open-menu {
-  opacity: .2;
+  opacity: 0.2;
 }
 
 .router-outlet-wrapper #router-outlet .bio {
   padding: 1.5rem;
+  padding-top: 0;
   margin-bottom: 1rem;
 }
 
@@ -201,8 +224,50 @@ nav ul li a:hover {
   padding: 0 15px;
 }
 
+.router-outlet-wrapper #router-outlet .upcoming-shows::before {
+  content: "";
+  display: block;
+  background: white;
+  height: 100%;
+  -webkit-clip-path: polygon(100% 0, 0 0, 100% 8%);
+          clip-path: polygon(100% 0, 0 0, 100% 8%);
+}
+
+.router-outlet-wrapper #router-outlet .upcoming-shows h2 {
+  background: rgba(73, 73, 73, 0.322);
+  color: white;
+  text-transform: uppercase;
+  padding: 0.5rem 10px;
+  display: block;
+  margin-bottom: 10px;
+  border-bottom: 2px solid rgba(255, 0, 0, 0.432);
+}
+
+.router-outlet-wrapper #router-outlet .upcoming-shows .img-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+  padding: 5px;
+}
+
 .router-outlet-wrapper #router-outlet .upcoming-shows .img-wrapper img {
   width: 100%;
+}
+
+.router-outlet-wrapper #router-outlet .upcoming-shows .img-wrapper img:nth-child(1) {
+  grid-column: span 2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+}
+
+.router-outlet-wrapper #router-outlet .upcoming-shows .img-wrapper img:nth-child(2) {
+  grid-column: 2 / -1;
+  grid-row: span 2;
+  margin-top: -50px;
 }
 
 .router-outlet-wrapper .social-media {

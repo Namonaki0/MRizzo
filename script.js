@@ -27,6 +27,22 @@ navLis.forEach((navLi) => {
   });
 });
 
+window.addEventListener("scroll", () => {
+  const nav = document.querySelector("nav");
+  const logo = document.querySelector(".logo");
+  if (window.scrollY > 0) {
+    nav.classList.add("scroll-effect");
+    logo.classList.add("scroll-effect");
+    burgerMenu.classList.add("scroll-effect");
+  } else {
+    nav.classList.remove("scroll-effect");
+    logo.classList.remove("scroll-effect");
+    burgerMenu.classList.remove("scroll-effect");
+  }
+});
+
+console.log(nav.classList);
+
 import RouterHandler from "./router.js";
 
 class Routing {
