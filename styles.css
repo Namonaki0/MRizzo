@@ -48,9 +48,9 @@ nav .burger-menu {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  height: 15px;
+  height: 28px;
   position: absolute;
-  top: 35px;
+  top: 25px;
   right: 35px;
   z-index: 100;
   -webkit-transition: all 100ms linear;
@@ -58,7 +58,7 @@ nav .burger-menu {
 }
 
 nav .burger-menu.scroll-effect {
-  top: 30px;
+  top: 22px;
 }
 
 nav .burger-menu:hover {
@@ -75,6 +75,10 @@ nav .burger-menu .bar-three {
   margin-bottom: 7px;
   -webkit-transition: all 100ms linear;
   transition: all 100ms linear;
+}
+
+nav .burger-menu .bar-one {
+  margin-top: 8px;
 }
 
 nav .burger-menu .bar-one.effect {
@@ -182,7 +186,6 @@ nav ul li a:hover {
 .router-outlet-wrapper #router-outlet .bio {
   padding: 1.5rem;
   padding-top: 0;
-  margin-bottom: 1rem;
 }
 
 .router-outlet-wrapper #router-outlet .bio::after {
@@ -224,17 +227,26 @@ nav ul li a:hover {
   padding: 0 15px;
 }
 
-.router-outlet-wrapper #router-outlet .upcoming-shows::before {
-  content: "";
+.router-outlet-wrapper #router-outlet .track-previews {
+  margin-bottom: 1rem;
+}
+
+.router-outlet-wrapper #router-outlet .track-previews h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding: 0 10px;
+  text-align: left;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.router-outlet-wrapper #router-outlet .track-previews iframe {
   display: block;
-  background: white;
-  height: 100%;
-  -webkit-clip-path: polygon(100% 0, 0 0, 100% 8%);
-          clip-path: polygon(100% 0, 0 0, 100% 8%);
+  margin: 0 auto;
+  margin-bottom: 5px;
 }
 
 .router-outlet-wrapper #router-outlet .upcoming-shows h2 {
-  background: rgba(73, 73, 73, 0.322);
   color: white;
   text-transform: uppercase;
   padding: 0.5rem 10px;
@@ -280,6 +292,14 @@ nav ul li a:hover {
 .router-outlet-wrapper .social-media a {
   color: white;
   margin-right: 10px;
+}
+
+.router-outlet-wrapper .developed-by {
+  background: white;
+  color: #1c1c1c;
+  padding: .3rem;
+  font-size: .8rem;
+  text-align: center;
 }
 
 .projects-outer-wrapper {
@@ -395,5 +415,46 @@ nav ul li a:hover {
   font-size: 1.2rem;
   opacity: 1;
   margin-right: -120px;
+}
+
+.merch-display {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  padding: .5rem;
+}
+
+.merch-display img {
+  width: 100%;
+}
+
+.frontier-shop {
+  padding: 1rem;
+  margin-left: auto;
+  width: 100%;
+}
+
+.frontier-shop a {
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  background: #353535;
+  padding: .6rem 1rem;
+  border: 1px solid #2b2b2b;
+  -webkit-transition: all 150ms ease;
+  transition: all 150ms ease;
+  text-align: center;
+  display: block;
+}
+
+.frontier-shop a:hover {
+  color: #1c1c1c;
+  background: #dfdfdf;
+  padding: .6rem 1rem;
+  border: 1px solid #2b2b2b;
 }
 /*# sourceMappingURL=styles.css.map */
