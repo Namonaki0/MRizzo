@@ -2,13 +2,22 @@ export default `
 
     <h1>Videos</h1>
 
-    <iframe id="ytplayer" type="text/html" width="95%" height="360"
+    <div class="main-video">
+          <iframe id="ytplayer" type="text/html" width="95%" height="360"
   src="https://www.youtube.com/embed/ECsDpg-OK3U"
   frameborder="0"></iframe>
+    </div>
 
-    <iframe id="playlist" type="text/html" width="90%" height="50%"
-  src="https://www.youtube.com/embed/videoseries?list=PLZDs0akd6CkwHzetjWFKMWDnLolVuT47_"
-  frameborder="0" class="html5-video-player ytp-exp-bottom-control-flexbox ytp-title-enable-channel-logo ytp-embed ytp-embed-playlist ytp-embed-overlays-autohide ytp-mobile ytp-embed-mobile-exp unstarted-mode ytp-hide-controls ytp-large-width-mode ytp-small-mode ytp-touch-mode ytp-menu-shown"></iframe>
+    <div class="video-library-streaming">
+       
+    </div>
+
+        <div class="video-library-other">
+          <p>content</p>
+        </div>
+       
+    </div>
+
 
 
     

@@ -466,3 +466,28 @@ text-align: center;
   }
 }
 
+//? VIDEOS
+
+.main-video {
+
+  iframe {
+    display: block;
+    margin: 5px auto;
+  }
+}
+
+.video-library-streaming {
+  display: flex;
+  overflow-x: auto;
+
+  iframe {
+    border: none;
+  }
+}
+.video-library-other {
+  height: 100px;
+
+  // iframe {
+  //   border: none;
+  // }
+}

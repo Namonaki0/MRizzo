@@ -457,4 +457,24 @@ nav ul li a:hover {
   padding: .6rem 1rem;
   border: 1px solid #2b2b2b;
 }
+
+.main-video iframe {
+  display: block;
+  margin: 5px auto;
+}
+
+.video-library-streaming {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: auto;
+}
+
+.video-library-streaming iframe {
+  border: none;
+}
+
+.video-library-other {
+  height: 100px;
+}
 /*# sourceMappingURL=styles.css.map */
