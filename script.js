@@ -53,20 +53,22 @@ new Routing();
 
 //? VIDEO SECTION
 
-document.addEventListener("load", function () {
-  const videoLibrary = document.querySelector(".video-library-streaming");
+const links = [
+  "https://www.youtube.com/embed/CkflepnHbhI",
+  "https://www.youtube.com/embed/ZJtyW6poDww",
+  "https://www.youtube.com/embed/FvuUm89JtLc",
+  "https://www.youtube.com/embed/jL8L97fbZcs",
+  "https://www.youtube.com/embed/ECsDpg-OK3U",
+];
 
-  const links = [
-    "https://www.youtube.com/embed/CkflepnHbhI",
-    "https://www.youtube.com/embed/ZJtyW6poDww",
-    "https://www.youtube.com/embed/FvuUm89JtLc",
-    "https://www.youtube.com/embed/jL8L97fbZcs",
-    "https://www.youtube.com/embed/ECsDpg-OK3U",
-  ];
+const videoLibrary = document.querySelector(".video-library-streaming");
 
+videosLink.addEventListener("click", () => {
   for (let i = 0; i <= links.length; i++) {
     const iframes = document.createElement("iframe");
     iframes.src = links[i];
     videoLibrary.append(iframes);
   }
 });
+
+window.HELP_IMPROVE_VIDEOJS = false;
