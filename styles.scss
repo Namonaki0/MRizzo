@@ -7,7 +7,6 @@
   font-style: normal;
 }
 
-
 * {
   padding: 0;
   margin: 0;
@@ -235,7 +234,6 @@ nav {
       }
     }
 
-
     .upcoming-shows {
       // &::before {
       //   content: "";
@@ -297,8 +295,8 @@ nav {
   .developed-by {
     background: white;
     color: #1c1c1c;
-    padding: .3rem;
-    font-size: .8rem;
+    padding: 0.3rem;
+    font-size: 0.8rem;
     text-align: center;
   }
 }
@@ -429,14 +427,17 @@ nav {
   }
 }
 
+//? MERCH PAGE
 
+.merch-page-wrapper {
 
-//? MERCH PAGE 
+  position: relative;
+
 
 .merch-display {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  padding: .5rem;
+  padding: 0.5rem;
   img {
     width: 100%;
   }
@@ -444,10 +445,8 @@ nav {
 
 .frontier-shop {
   padding: 1rem;
-     margin-left: auto;
+  margin-left: auto;
   width: 100%;
-  
-  // background: red;
 
   a {
     font-size: 1.1rem;
@@ -455,31 +454,43 @@ nav {
     font-weight: 500;
     text-decoration: none;
     text-transform: uppercase;
-     color: white;
-  background: #353535;
-    padding: .6rem 1rem;
-   border: 1px solid #2b2b2b;
+    color: white;
+    background: #353535;
+    padding: 0.6rem 1rem;
+    border: 1px solid #2b2b2b;
     transition: all 150ms ease;
-text-align: center;
-     display: block;
-       
-         
+    text-align: center;
+    display: block;
 
     &:hover {
-        color: #1c1c1c;
-           background: rgb(223, 223, 223);
-        padding: .6rem 1rem;
-        border: 1px solid #2b2b2b;
-            
-         
+      color: #1c1c1c;
+      background: rgb(223, 223, 223);
+      padding: 0.6rem 1rem;
+      border: 1px solid #2b2b2b;
     }
   }
+}
+
+.merch-page-modal {
+  display: none;
+  position: absolute;
+  background: rgba(128, 128, 128, 0.247);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  transition: all 150ms linear;
+
+  &.active {
+    display: block;
+    opacity: 1;
+  }
+}
 }
 
 //? VIDEOS
 
 .main-video {
-
   iframe {
     display: block;
     margin: 5px auto;
