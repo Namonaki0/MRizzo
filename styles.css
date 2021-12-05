@@ -1,4 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;900&display=swap");
+@font-face {
+  font-family: "basement grotesque";
+  src: url("utils/fonts/BasementGrotesque-Black_v1.202.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -8,7 +14,8 @@
 
 body {
   background: black;
-  font-family: "Roboto", sans-serif;
+  font-family: "basement grotesque", sans-serif;
+  letter-spacing: 1px;
   z-index: 1000;
   isolation: isolate;
   color: white;
@@ -225,6 +232,7 @@ nav ul li a:hover {
 
 .router-outlet-wrapper #router-outlet .bio .bio-description-wrapper p {
   padding: 0 15px;
+  line-height: 22px;
 }
 
 .router-outlet-wrapper #router-outlet .track-previews {
