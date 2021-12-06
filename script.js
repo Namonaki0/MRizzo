@@ -1,3 +1,13 @@
+import RouterHandler from "./router.js";
+
+class Routing {
+  constructor() {
+    new RouterHandler();
+  }
+}
+
+new Routing();
+
 const burgerMenu = document.querySelector(".burger-menu");
 const nav = document.querySelector("nav");
 const navUl = document.querySelector("ul");
@@ -41,16 +51,6 @@ window.addEventListener("scroll", () => {
   }
 });
 
-import RouterHandler from "./router.js";
-
-class Routing {
-  constructor() {
-    new RouterHandler();
-  }
-}
-
-new Routing();
-
 //? VIDEO SECTION
 
 // const links = [
@@ -74,9 +74,14 @@ new Routing();
 window.HELP_IMPROVE_VIDEOJS = false;
 
 const productDisplay = document.querySelectorAll(".merch-display > img");
+const merchPageWrapper = document.querySelector(".merch-page-wrapper");
 const merchPageModal = document.querySelector(".merch-page-modal");
 const merchPageModalImg = document.querySelector(".merch-page-modal > img");
 const merchPageModalSpan = document.querySelector(".merch-page-modal > span");
+
+window.addEventListener("DOMContentLoaded", () => {
+  console.log("loaded");
+});
 
 if (productDisplay) {
   productDisplay.forEach((product) => {

@@ -4,10 +4,6 @@ import videos from "./videos.js";
 import merch from "./merch.js";
 
 export default function Views(path) {
-  // const isHomeRoute = path === "/";
-  // const isVideosRoute = path === "/videos";
-  // const isMerchRoute = path === "/merch";
-
   switch (path) {
     case "/":
       routerOutlet.innerHTML = `<div>${home}</div>`;
@@ -22,7 +18,4 @@ export default function Views(path) {
       routerOutlet.innerHTML = `<div>${home}</div>`;
       break;
   }
-  // if (isHomeRoute) {
-  //   routerOutlet.innerHTML = `<div>${bio}</div>`;
-  // }
 }

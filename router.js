@@ -1,6 +1,8 @@
 import Views from "./sections/views.js";
 
-const router = new Navigo(null, true, "#");
+console.log(Views);
+
+const router = new Navigo(null, { linksSelector: "a" }, "#");
 
 export default class RouterHandler {
   constructor() {
@@ -18,6 +20,7 @@ export default class RouterHandler {
       router
         .on(path, () => {
           page(path);
+          console.log(path);
         })
         .resolve();
     });
