@@ -73,13 +73,21 @@ new Routing();
 
 window.HELP_IMPROVE_VIDEOJS = false;
 
-const tshirt = document.querySelector(".merch-display > a > img");
+const productDisplay = document.querySelectorAll(".merch-display > img");
 const merchPageModal = document.querySelector(".merch-page-modal");
 const merchPageModalImg = document.querySelector(".merch-page-modal > img");
+const merchPageModalSpan = document.querySelector(".merch-page-modal > span");
 
-if (tshirt) {
-  tshirt.addEventListener("click", (e) => {
-    merchPageModalImg.src = e.target.src;
-    merchPageModal.classList.add("active");
+if (productDisplay) {
+  productDisplay.forEach((product) => {
+    product.addEventListener("click", (e) => {
+      merchPageModalImg.src = e.target.src;
+      merchPageModal.classList.add("active");
+      document.body.classList.add("merch-modal-active");
+    });
+    merchPageModalSpan.addEventListener("click", () => {
+      merchPageModal.classList.remove("active");
+      document.body.classList.remove("merch-modal-active");
+    });
   });
 }

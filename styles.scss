@@ -21,6 +21,11 @@ body {
   isolation: isolate;
   color: white;
   overflow-x: hidden;
+
+    &.merch-modal-active {
+      height: 100%;
+      overflow: hidden;
+    }
 }
 
 nav {
@@ -430,7 +435,6 @@ nav {
 //? MERCH PAGE
 
 .merch-page-wrapper {
-
   position: relative;
 
 
@@ -438,8 +442,10 @@ nav {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   padding: 0.5rem;
+
   img {
     width: 100%;
+    cursor: pointer;
   }
 }
 
@@ -473,18 +479,38 @@ nav {
 
 .merch-page-modal {
   display: none;
-  position: absolute;
-  background: rgba(128, 128, 128, 0.247);
+  position: sticky;
+  background: rgba(10, 10, 10, 0.849);
   top: 0;
-  bottom: 0;
+  right: 0;
   left: 0;
+  bottom: 0;
   opacity: 0;
   transition: all 150ms linear;
 
+  span {
+    font-size: 2rem;
+    padding-right: 3rem;
+    text-align: right;
+    cursor: pointer;
+    background: linear-gradient(to left, black, rgb(49, 49, 49))
+  }
+
+  img {
+    padding: 2rem 0 0;
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    margin-top: -20px;
+  }
+
   &.active {
-    display: block;
+    display: flex;
+    flex-direction: column;
     opacity: 1;
   }
+
+
 }
 }
 

@@ -5,7 +5,7 @@ export default `
     <h1>Merch</h1>
 
     <section class="merch-display">
-        <a ><img src="https://www.storefrontier.com/sites/default/files/product_mockups/66357/rizzo_7_170032_1083_325093_470_black170746_nobg.png?1638400254" loading="lazy"/></a>
+        <img src="https://www.storefrontier.com/sites/default/files/product_mockups/66357/rizzo_7_170032_1083_325093_470_black170746_nobg.png?1638400254" loading="lazy"/>
         <img src="https://www.storefrontier.com/sites/default/files/styles/product_listing_large/public/product_mockups/66357/rizzo_1_155452_1083_324971_470_black155810_nobg.png?itok=ljd-UQGE" loading="lazy">
         <img src="https://www.storefrontier.com/sites/default/files/styles/product_listing_large/public/product_mockups/66357/rizzo_2_160250_1083_324990_470_black160826_nobg.png?itok=buJkTnTz" loading="lazy">
         <img src="https://www.storefrontier.com/sites/default/files/styles/product_listing_large/public/product_mockups/66357/rizzo_3_161224_1083_325007_470_black161529_nobg.png?itok=9LLiVPvo" loading="lazy">
@@ -20,6 +20,7 @@ export default `
     </div>
 
     <div class="merch-page-modal">
+        <span>X</span>
         <img src="" alt="">
         <h3>title</h3>
         <p>description</p>
