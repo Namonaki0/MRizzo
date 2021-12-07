@@ -4,24 +4,22 @@ export default `
 
     <h1>Videos</h1>
     
-    <video
-  id="vid1"
-  class="video-js vjs-default-skin"
-  controls
-  preload="auto"
-  width="90%"
-  height="264"
-  poster="MY_VIDEO_POSTER.jpg"
-  data-setup="{"techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/embed/CkflepnHbhI"}], "youtube": { "iv_load_policy": 1 }}"
->
 
-</video>
 
     <div class="main-video">
+
+     <section class="videos">
+        <iframe width="95%" height="315" src="https://www.youtube.com/embed/ECsDpg-OK3U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+
           
     </div>
 
     <div class="video-library-streaming">
+
+        <section class="videos-playlist">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLZDs0akd6CkwHzetjWFKMWDnLolVuT47_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
        
     </div>
 

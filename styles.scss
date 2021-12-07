@@ -170,6 +170,11 @@ nav {
       opacity: 0.2;
     }
 
+    // &.merch-modal-active {
+    //   height: 100%;
+    //   overflow: hidden;
+    // }
+
     .bio {
       padding: 1.5rem;
       padding-top: 0;
@@ -477,15 +482,10 @@ nav {
   }
 }
 
-.merch-page-modal {
-  display: none;
-  position: sticky;
+#merch-page-modal {
+  visibility: hidden;
+  position: absolute;
   background: rgba(10, 10, 10, 0.849);
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  opacity: 0;
   transition: all 150ms linear;
 
   span {
@@ -506,6 +506,14 @@ nav {
 
   &.active {
     display: flex;
+    width: 100%;
+    // position: sticky;
+      top: 0;
+      right: 0;
+      left: 0;
+      // bottom: 0;
+      opacity: 0;
+    visibility: unset;
     flex-direction: column;
     opacity: 1;
   }

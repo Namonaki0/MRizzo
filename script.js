@@ -1,4 +1,7 @@
 import RouterHandler from "./router.js";
+import merch from "./sections/merch.js";
+import home from "./sections/home.js";
+import videos from "./sections/videos.js";
 
 class Routing {
   constructor() {
@@ -53,46 +56,50 @@ window.addEventListener("scroll", () => {
 
 //? VIDEO SECTION
 
-// const links = [
-//   "https://www.youtube.com/embed/CkflepnHbhI",
-//   "https://www.youtube.com/embed/ZJtyW6poDww",
-//   "https://www.youtube.com/embed/FvuUm89JtLc",
-//   "https://www.youtube.com/embed/jL8L97fbZcs",
-//   "https://www.youtube.com/embed/ECsDpg-OK3U",
-// ];
+const links = [
+  "https://www.youtube.com/embed/CkflepnHbhI",
+  "https://www.youtube.com/embed/ZJtyW6poDww",
+  "https://www.youtube.com/embed/FvuUm89JtLc",
+  "https://www.youtube.com/embed/jL8L97fbZcs",
+  "https://www.youtube.com/embed/ECsDpg-OK3U",
+];
 
-// const videoLibrary = document.querySelector(".video-library-streaming");
+const videosWrapper = document.querySelector(".videos-wrapper");
+const videoLibrary = document.querySelector(".video-library-other");
 
-// videosLink.addEventListener("click", () => {
-//   for (let i = 0; i <= links.length; i++) {
-//     const iframes = document.createElement("iframe");
-//     iframes.src = links[i];
-//     videoLibrary.append(iframes);
-//   }
+// window.HELP_IMPROVE_VIDEOJS = false;
+
+const productDisplayWrapper = document.querySelectorAll(".merch-display > img");
+const merchDisplay = document.querySelector(".merch-display");
+// const productDisplayImgs = document.querySelectorAll(".merch-display > img");
+const merchPageWrapper = document.querySelector(".merch-page-wrapper");
+// const merchPageModal = document.querySelector(".merch-page-modal");
+// const merchPageModalImg = document.querySelector(".merch-page-modal > img");
+// const merchPageModalSpan = document.querySelector(".merch-page-modal > span");
+
+// function loading() {
+
+// }
+
 // });
 
-window.HELP_IMPROVE_VIDEOJS = false;
-
-const productDisplay = document.querySelectorAll(".merch-display > img");
-const merchPageWrapper = document.querySelector(".merch-page-wrapper");
-const merchPageModal = document.querySelector(".merch-page-modal");
-const merchPageModalImg = document.querySelector(".merch-page-modal > img");
-const merchPageModalSpan = document.querySelector(".merch-page-modal > span");
-
-window.addEventListener("DOMContentLoaded", () => {
-  console.log("loaded");
-});
-
-if (productDisplay) {
-  productDisplay.forEach((product) => {
-    product.addEventListener("click", (e) => {
-      merchPageModalImg.src = e.target.src;
-      merchPageModal.classList.add("active");
-      document.body.classList.add("merch-modal-active");
-    });
-    merchPageModalSpan.addEventListener("click", () => {
-      merchPageModal.classList.remove("active");
-      document.body.classList.remove("merch-modal-active");
-    });
+const productDisplayImgs = document.querySelectorAll(".merch-display > img");
+const merchPageModal = document.querySelector("#merch-page-modal");
+const merchPageModalImg = document.querySelector("#merch-page-modal > img");
+const merchPageModalSpan = document.querySelector("#merch-page-modal > span");
+productDisplayImgs.forEach((product) => {
+  product.addEventListener("click", (e) => {
+    console.log("exists");
+    merchPageModalImg.src = e.target.src;
+    merchPageModal.classList.add("active");
+    document.body.classList.add("merch-modal-active");
   });
-}
+  merchPageModalSpan.addEventListener("click", () => {
+    merchPageModal.classList.remove("active");
+    document.body.classList.remove("merch-modal-active");
+  });
+});
+window.addEventListener("click", () => {
+  merchPageModal.classList.remove("active");
+  document.body.classList.remove("merch-modal-active");
+});

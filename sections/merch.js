@@ -19,7 +19,7 @@ export default `
         <a href="https://www.storefrontier.com/marcrizzo" target="_blank">more merch</a>
     </div>
 
-    <div class="merch-page-modal">
+    <div id="merch-page-modal">
         <span>X</span>
         <img src="" alt="">
         <h3>title</h3>
