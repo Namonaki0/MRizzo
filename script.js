@@ -56,32 +56,20 @@ window.addEventListener("scroll", () => {
 
 //? VIDEO SECTION
 
-const links = [
-  "https://www.youtube.com/embed/CkflepnHbhI",
-  "https://www.youtube.com/embed/ZJtyW6poDww",
-  "https://www.youtube.com/embed/FvuUm89JtLc",
-  "https://www.youtube.com/embed/jL8L97fbZcs",
-  "https://www.youtube.com/embed/ECsDpg-OK3U",
-];
+// const links = [
+//   "https://www.youtube.com/embed/CkflepnHbhI",
+//   "https://www.youtube.com/embed/ZJtyW6poDww",
+//   "https://www.youtube.com/embed/FvuUm89JtLc",
+//   "https://www.youtube.com/embed/jL8L97fbZcs",
+//   "https://www.youtube.com/embed/ECsDpg-OK3U",
+// ];
 
-const videosWrapper = document.querySelector(".videos-wrapper");
-const videoLibrary = document.querySelector(".video-library-other");
+// const videosWrapper = document.querySelector(".videos-wrapper");
+// const videoLibrary = document.querySelector(".video-library-other");
 
-// window.HELP_IMPROVE_VIDEOJS = false;
-
-const productDisplayWrapper = document.querySelectorAll(".merch-display > img");
-const merchDisplay = document.querySelector(".merch-display");
-// const productDisplayImgs = document.querySelectorAll(".merch-display > img");
-const merchPageWrapper = document.querySelector(".merch-page-wrapper");
-// const merchPageModal = document.querySelector(".merch-page-modal");
-// const merchPageModalImg = document.querySelector(".merch-page-modal > img");
-// const merchPageModalSpan = document.querySelector(".merch-page-modal > span");
-
-// function loading() {
-
-// }
-
-// });
+// const productDisplayWrapper = document.querySelectorAll(".merch-display > img");
+// const merchDisplay = document.querySelector(".merch-display");
+// const merchPageWrapper = document.querySelector(".merch-page-wrapper");
 
 const productDisplayImgs = document.querySelectorAll(".merch-display > img");
 const merchPageModal = document.querySelector("#merch-page-modal");

@@ -1,4 +1,9 @@
-// @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;900&display=swap");
+//? VARIABLES ---
+$ff-primary: "basement grotesque", sans-serif;
+$color-primary: white;
+$bg-primary: black;
+$bg-secondary: white;
+//? VARIABLES ---
 
 @font-face {
   font-family: "basement grotesque";
@@ -15,11 +20,11 @@
 
 body {
   background: black;
-  font-family: "basement grotesque", sans-serif;
+  font-family: $ff-primary;
   letter-spacing: 1px;
   z-index: 1000;
   isolation: isolate;
-  color: white;
+  color: $color-primary;
   overflow-x: hidden;
 
     &.merch-modal-active {
@@ -32,7 +37,7 @@ nav {
   display: flex;
   flex-direction: column;
   transition: all 100ms linear;
-  background: black;
+  background: $bg-primary;
   height: 100px;
   position: fixed;
   left: 0;
@@ -71,7 +76,7 @@ nav {
       display: block;
       height: 1px;
       width: 40px;
-      background-color: white;
+      background-color: $bg-secondary;
       margin-bottom: 7px;
       transition: all 100ms linear;
     }
@@ -127,8 +132,7 @@ nav {
       visibility: unset;
       opacity: 1;
       transform: translateX(0);
-      background: black;
-      // margin-top: .5rem;
+      background: $bg-primary;
     }
 
     li {
@@ -148,7 +152,7 @@ nav {
 
         &:hover {
           border-bottom: 1px solid rgba(192, 192, 192, 0.63);
-          color: white;
+          color: $color-primary;
         }
       }
     }
@@ -178,7 +182,6 @@ nav {
     .bio {
       padding: 1.5rem;
       padding-top: 0;
-      // margin-bottom: 1rem;
 
       &::after {
         content: "";
@@ -245,17 +248,10 @@ nav {
     }
 
     .upcoming-shows {
-      // &::before {
-      //   content: "";
-      //   display: block;
-      //   background: white;
-      //   height: 100%;
-      //   clip-path: polygon(100% 0, 0 0, 100% 8%);
-      // }
+
 
       h2 {
-        // background: rgba(73, 73, 73, 0.322);
-        color: white;
+        color: $color-primary;
         text-transform: uppercase;
         padding: 0.5rem 10px;
         display: block;
@@ -267,7 +263,6 @@ nav {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, 1fr);
-
         padding: 5px;
 
         img {
@@ -292,18 +287,17 @@ nav {
     font-size: 1.8rem;
     text-align: center;
     padding: 10px;
-
+    
     a {
-      color: white;
-
+      color: $color-primary;
       margin-right: 10px;
-      i {
-      }
+
+
     }
   }
 
   .developed-by {
-    background: white;
+    background: $bg-secondary;
     color: #1c1c1c;
     padding: 0.3rem;
     font-size: 0.8rem;
@@ -315,14 +309,14 @@ nav {
   display: flex;
   display: none;
   height: 200px;
-  background: black;
+  background: $bg-primary;
   overflow: hidden;
 
   &::before {
     content: "PROJECTS";
     height: 150px;
     width: 100px;
-    color: white;
+    color: $color-primary;
     position: absolute;
     margin-top: -10px;
   }
@@ -420,12 +414,12 @@ nav {
     }
 
     section {
-      color: white;
+      color: $color-primary;
       display: none;
     }
 
     title {
-      color: white;
+      color: $color-primary;
       display: unset;
       text-transform: uppercase;
       font-family: sans-serif;
@@ -441,7 +435,6 @@ nav {
 
 .merch-page-wrapper {
   position: relative;
-
 
 .merch-display {
   display: grid;
@@ -465,7 +458,7 @@ nav {
     font-weight: 500;
     text-decoration: none;
     text-transform: uppercase;
-    color: white;
+    color: $color-primary;
     background: #353535;
     padding: 0.6rem 1rem;
     border: 1px solid #2b2b2b;
