@@ -11,6 +11,7 @@ class Routing {
 
 new Routing();
 
+//? MENU
 const burgerMenu = document.querySelector(".burger-menu");
 const nav = document.querySelector("nav");
 const navUl = document.querySelector("ul");
@@ -40,6 +41,7 @@ navLis.forEach((navLi) => {
   });
 });
 
+//? NAVBAR BEHAVIOUR ON SCROLL
 window.addEventListener("scroll", () => {
   const nav = document.querySelector("nav");
   const logo = document.querySelector(".logo");
@@ -70,9 +72,9 @@ window.addEventListener("scroll", () => {
 // const productDisplayWrapper = document.querySelectorAll(".merch-display > img");
 // const merchDisplay = document.querySelector(".merch-display");
 // const merchPageWrapper = document.querySelector(".merch-page-wrapper");
+const merchPageModal = document.querySelector("#merch-page-modal");
 
 const productDisplayImgs = document.querySelectorAll(".merch-display > img");
-const merchPageModal = document.querySelector("#merch-page-modal");
 const merchPageModalImg = document.querySelector("#merch-page-modal > img");
 const merchPageModalSpan = document.querySelector("#merch-page-modal > span");
 productDisplayImgs.forEach((product) => {
@@ -87,7 +89,7 @@ productDisplayImgs.forEach((product) => {
     document.body.classList.remove("merch-modal-active");
   });
 });
-window.addEventListener("click", () => {
-  merchPageModal.classList.remove("active");
-  document.body.classList.remove("merch-modal-active");
-});
+// window.addEventListener("click", () => {
+//   merchPageModal.classList.remove("active");
+//   document.body.classList.remove("merch-modal-active");
+// });

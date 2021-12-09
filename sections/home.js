@@ -9,7 +9,7 @@ export default `
 
         <div class="bio-description-wrapper">
 
-              <h2>M Rizzo</h2>
+              <h2>About Marc</h2>
 
         <p>Marc Rizzo is an American guitarist best known for his presence in metal band Soulfly, formerly of ill Nino and on the rise solo projects Acoustic Vendetta and Revenge Beast.</p>
 

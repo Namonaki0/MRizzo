@@ -110,20 +110,23 @@ nav .burger-menu .bar-three.effect {
           transform: translateY(-11px) rotate(-45deg);
 }
 
-nav .logo {
-  width: 80px;
+nav .logo-link {
   margin: 0 auto;
+}
+
+nav .logo-link .logo {
   margin-top: 0.5rem;
   -webkit-transition: all 100ms linear;
   transition: all 100ms linear;
+  width: 80px;
 }
 
-nav .logo.open-menu {
+nav .logo-link .logo.open-menu {
   visibility: hidden;
 }
 
-nav .logo.scroll-effect {
-  margin-top: 1rem;
+nav .logo-link .logo.scroll-effect {
+  margin-top: .5rem;
   width: 50px;
 }
 

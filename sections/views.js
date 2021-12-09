@@ -12,7 +12,7 @@ export default function Views(path) {
       routerOutlet.innerHTML = `<div>${videos}</div>`;
       break;
     case "/merch":
-      routerOutlet.innerHTML = `${merch}`;
+      routerOutlet.innerHTML = `<div>${merch}</div>`;
       break;
     default:
       routerOutlet.innerHTML = `<div>${home}</div>`;

@@ -1,6 +1,6 @@
 import Views from "./sections/views.js";
 
-const router = new Navigo(null, { linksSelector: "a" }, "#");
+const router = new Navigo(null, true, "#");
 
 export default class RouterHandler {
   constructor() {
