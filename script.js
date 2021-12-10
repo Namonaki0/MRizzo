@@ -1,7 +1,5 @@
 import RouterHandler from "./router.js";
-import merch from "./sections/merch.js";
-import home from "./sections/home.js";
-import videos from "./sections/videos.js";
+import MerchPage from "./sections/merch.js";
 
 class Routing {
   constructor() {
@@ -66,30 +64,36 @@ window.addEventListener("scroll", () => {
 //   "https://www.youtube.com/embed/ECsDpg-OK3U",
 // ];
 
-// const videosWrapper = document.querySelector(".videos-wrapper");
-// const videoLibrary = document.querySelector(".video-library-other");
+const merchLoad = () => {
+  if (MerchPage) {
+    const merchPageModal = document.querySelector("#merch-page-modal");
 
-// const productDisplayWrapper = document.querySelectorAll(".merch-display > img");
-// const merchDisplay = document.querySelector(".merch-display");
-// const merchPageWrapper = document.querySelector(".merch-page-wrapper");
-const merchPageModal = document.querySelector("#merch-page-modal");
+    const productDisplayImgs = document.querySelectorAll(
+      ".merch-display > img"
+    );
+    const merchPageModalSpan = document.querySelector(
+      "#merch-page-modal > span"
+    );
+    const merchPageModalImg = document.querySelector("#merch-page-modal > img");
 
-const productDisplayImgs = document.querySelectorAll(".merch-display > img");
-const merchPageModalImg = document.querySelector("#merch-page-modal > img");
-const merchPageModalSpan = document.querySelector("#merch-page-modal > span");
-productDisplayImgs.forEach((product) => {
-  product.addEventListener("click", (e) => {
-    console.log("exists");
-    merchPageModalImg.src = e.target.src;
-    merchPageModal.classList.add("active");
-    document.body.classList.add("merch-modal-active");
-  });
-  merchPageModalSpan.addEventListener("click", () => {
-    merchPageModal.classList.remove("active");
-    document.body.classList.remove("merch-modal-active");
-  });
-});
-// window.addEventListener("click", () => {
-//   merchPageModal.classList.remove("active");
-//   document.body.classList.remove("merch-modal-active");
-// });
+    console.log(
+      "yes",
+      `modal: ${merchPageModal}, images: ${productDisplayImgs}`
+    );
+
+    productDisplayImgs.forEach((product) => {
+      console.log(product);
+      product.addEventListener("click", (e) => {
+        console.log("exists");
+        merchPageModalImg.src = e.target.src;
+        merchPageModal.classList.add("active");
+        document.body.classList.add("merch-modal-active");
+      });
+      merchPageModalSpan.addEventListener("click", () => {
+        merchPageModal.classList.remove("active");
+        document.body.classList.remove("merch-modal-active");
+      });
+    });
+  }
+  merchLoad();
+};

@@ -126,7 +126,7 @@ nav .logo-link .logo.open-menu {
 }
 
 nav .logo-link .logo.scroll-effect {
-  margin-top: .5rem;
+  margin-top: 0.5rem;
   width: 50px;
 }
 
@@ -512,7 +512,6 @@ nav ul li a:hover {
   top: 0;
   right: 0;
   left: 0;
-  opacity: 0;
   visibility: unset;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;

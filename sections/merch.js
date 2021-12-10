@@ -1,6 +1,6 @@
-export default `
-
-<div class="merch-page-wrapper">
+export default function MerchPage(path) {
+  return `
+    <div class="merch-page-wrapper">
 
     <h1>Merch</h1>
 
@@ -19,17 +19,17 @@ export default `
         <a href="https://www.storefrontier.com/marcrizzo" target="_blank">more merch</a>
     </div>
 
+
     <div id="merch-page-modal">
         <span>X</span>
         <img src="" alt="">
         <h3>title</h3>
         <p>description</p>
     </div>
-
 </div>
 
 
-    
-    `;
+`;
+}
 
 // https://www.storefrontier.com/product/theflyer
